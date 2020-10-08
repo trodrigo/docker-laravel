@@ -40,11 +40,11 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
 
-# - id: "Ajusting deployment file - k8s"  
-#   name: 'gcr.io/cloud-builders/docker'
-#   entrypoint: "/bin/bash"
-#   args: 
-#     - '-c'
-#     - |
-#       sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA' .k8s/app/deployment.yaml > .k8s/app/deployment-new.yaml;
-#       cat k8s/app/deployment-new.yaml
+- id: "Ajusting deployment file - k8s"  
+  name: 'gcr.io/cloud-builders/docker'
+  entrypoint: "/bin/bash"
+  args: 
+    - '-c'
+    - |
+      sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA' .k8s/app/deployment.yaml > .k8s/app/deployment-new.yaml;
+      cat k8s/app/deployment-new.yaml
