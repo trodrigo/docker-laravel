@@ -40,7 +40,7 @@ steps:
   name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA']
 
-- id: "Ajusting deployment file - k8s"  
+- id: "Ajusting deployment the file - k8s"  
   name: 'gcr.io/cloud-builders/docker'
   entrypoint: "/bin/bash"
   args: 
