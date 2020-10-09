@@ -6,7 +6,7 @@ data:
     env: |
         APP_NAME=docker-laravel
         APP_ENV=local
-        APP_KEY=lX1797dG5iR0vdz4FOCbf2/gbq9+hukeXMob/P24fUQ=
+        APP_KEY=base64:lX1797dG5iR0vdz4FOCbf2/gbq9+hukeXMob/P24fUQ=
         APP_DEBUG=true
         APP_URL=http://localhost
         LOG_CHANNEL=stack
